@@ -4,16 +4,11 @@ import java.util.Objects;
 import java.util.UUID;
 
 /**
- * Sistemdeki temel görev (Task) sınıfıdır.
- *
+ 
+ 
  * <p>
  * Her görev bir başlık, açıklama, teslim tarihi (Deadline)
  * ve öncelik seviyesi (Priority) içerir.
- * </p>
- *
- * <p>
- * Deadline ve Priority alanları kapsülleme (encapsulation)
- * prensibine uygun olarak private tutulmuştur.
  * </p>
  *
  * <p>
@@ -76,6 +71,8 @@ public class Task implements Completable {
     public void setPriority(Priority priority) {
         this.priority = Objects.requireNonNull(priority);
     }
+
+    // ===== Interface implementation =====
 
     @Override
     public void complete() {
